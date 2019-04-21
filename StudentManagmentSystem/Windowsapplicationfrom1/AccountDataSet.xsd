@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AccountDataSet" targetNamespace="http://tempuri.org/AccountDataSet.xsd" xmlns:mstns="http://tempuri.org/AccountDataSet.xsd" xmlns="http://tempuri.org/AccountDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AccountDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="AccountDataSet" msprop:Generator_UserDSName="AccountDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ACCOUNT" msprop:Generator_TableClassName="ACCOUNTDataTable" msprop:Generator_TableVarName="tableACCOUNT" msprop:Generator_TablePropName="ACCOUNT" msprop:Generator_RowDeletingName="ACCOUNTRowDeleting" msprop:Generator_RowChangingName="ACCOUNTRowChanging" msprop:Generator_RowEvHandlerName="ACCOUNTRowChangeEventHandler" msprop:Generator_RowDeletedName="ACCOUNTRowDeleted" msprop:Generator_UserTableName="ACCOUNT" msprop:Generator_RowChangedName="ACCOUNTRowChanged" msprop:Generator_RowEvArgName="ACCOUNTRowChangeEvent" msprop:Generator_RowClassName="ACCOUNTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AID" msprop:Generator_ColumnVarNameInTable="columnAID" msprop:Generator_ColumnPropNameInRow="AID" msprop:Generator_ColumnPropNameInTable="AIDColumn" msprop:Generator_UserColumnName="AID" type="xs:string" />
+              <xs:element name="AdmissonFee" msprop:Generator_ColumnVarNameInTable="columnAdmissonFee" msprop:Generator_ColumnPropNameInRow="AdmissonFee" msprop:Generator_ColumnPropNameInTable="AdmissonFeeColumn" msprop:Generator_UserColumnName="AdmissonFee" type="xs:string" minOccurs="0" />
+              <xs:element name="SemisterFee" msprop:Generator_ColumnVarNameInTable="columnSemisterFee" msprop:Generator_ColumnPropNameInRow="SemisterFee" msprop:Generator_ColumnPropNameInTable="SemisterFeeColumn" msprop:Generator_UserColumnName="SemisterFee" type="xs:string" minOccurs="0" />
+              <xs:element name="TutionFee" msprop:Generator_ColumnVarNameInTable="columnTutionFee" msprop:Generator_ColumnPropNameInRow="TutionFee" msprop:Generator_ColumnPropNameInTable="TutionFeeColumn" msprop:Generator_UserColumnName="TutionFee" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalPaid" msprop:Generator_ColumnVarNameInTable="columnTotalPaid" msprop:Generator_ColumnPropNameInRow="TotalPaid" msprop:Generator_ColumnPropNameInTable="TotalPaidColumn" msprop:Generator_UserColumnName="TotalPaid" type="xs:string" minOccurs="0" />
+              <xs:element name="Due" msprop:Generator_ColumnVarNameInTable="columnDue" msprop:Generator_ColumnPropNameInRow="Due" msprop:Generator_ColumnPropNameInTable="DueColumn" msprop:Generator_UserColumnName="Due" type="xs:string" minOccurs="0" />
+              <xs:element name="Waiver" msprop:Generator_ColumnVarNameInTable="columnWaiver" msprop:Generator_ColumnPropNameInRow="Waiver" msprop:Generator_ColumnPropNameInTable="WaiverColumn" msprop:Generator_UserColumnName="Waiver" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ACCOUNT" />
+      <xs:field xpath="mstns:AID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

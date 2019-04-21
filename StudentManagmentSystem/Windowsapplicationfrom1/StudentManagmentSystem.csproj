@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1FB2DB30-EB5F-4666-8B99-53C675ACD926}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsApplication1</RootNamespace>
+    <AssemblyName>WindowsFormsApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountCrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccountCrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountDataSet.cs">
+      <DependentUpon>AccountDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AccountDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccountDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\AccountBL.cs" />
+    <Compile Include="BLL\CourseInfoBL.cs" />
+    <Compile Include="BLL\ResultBL.cs" />
+    <Compile Include="BLL\Search_Acco_BL.cs" />
+    <Compile Include="BLL\Search_Result_BL.cs" />
+    <Compile Include="BLL\Search_Student_BL.cs" />
+    <Compile Include="BLL\Search_teacher_BL.cs" />
+    <Compile Include="BLL\TeacherInfoBL.cs" />
+    <Compile Include="DAL\CourseInfoDAL.cs" />
+    <Compile Include="DAL\DAO\SearchTeacher.cs" />
+    <Compile Include="DAL\Search_Acco_DAL.cs" />
+    <Compile Include="DAL\Search_Result_DAL.cs" />
+    <Compile Include="DAL\TeacherInfoDAL.cs" />
+    <Compile Include="Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Result Sheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Result Sheet.Designer.cs">
+      <DependentUpon>Result Sheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResultCrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResultCrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ResultDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResultDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Search Acco info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search Acco info.Designer.cs">
+      <DependentUpon>Search Acco info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search_Result_Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search_Result_Info.Designer.cs">
+      <DependentUpon>Search_Result_Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIL\CoursesU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIL\CoursesU.Designer.cs">
+      <DependentUpon>CoursesU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DAO\Accounts.cs" />
+    <Compile Include="DAL\DAO\Result.cs" />
+    <Compile Include="DAL\DAO\ResultDA.cs" />
+    <Compile Include="DAL\DAO\Search.cs" />
+    <Compile Include="DAL\DAO\Search_Student_DAO.cs" />
+    <Compile Include="DAL\DAO\Search_teacher_DAO.cs" />
+    <Compile Include="DAL\ResultDL.cs" />
+    <Compile Include="DAL\Search_Student_DAL.cs" />
+    <Compile Include="DAL\Search_Teacher_DAL.cs" />
+    <Compile Include="UIL\Search Teacher Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIL\Search Teacher Info.Designer.cs">
+      <DependentUpon>Search Teacher Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIL\Sign_IN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIL\Sign_IN.Designer.cs">
+      <DependentUpon>Sign_IN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIL\Search Student Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIL\Search Student Info.Designer.cs">
+      <DependentUpon>Search Student Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIL\AccountUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIL\AccountUI.Designer.cs">
+      <DependentUpon>AccountUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\CourseBL.cs" />
+    <Compile Include="BLL\StudentBL.cs" />
+    <Compile Include="BLL\TeacherBL.cs" />
+    <Compile Include="DAL\AccountDL.cs" />
+    <Compile Include="DAL\CourseDL.cs" />
+    <Compile Include="DAL\DAO\AccountDA.cs" />
+    <Compile Include="DAL\DAO\CourseDA.cs" />
+    <Compile Include="DAL\DAO\CourseO.cs" />
+    <Compile Include="DAL\DAO\Teacher.cs" />
+    <Compile Include="DAL\DAO\TeacherDA.cs" />
+    <Compile Include="DAL\TeacherDL.cs" />
+    <Compile Include="UIL\RESULT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIL\RESULT.Designer.cs">
+      <DependentUpon>RESULT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIL\Teacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIL\Teacher.Designer.cs">
+      <DependentUpon>Teacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIL\CourseInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIL\CourseInformation.Designer.cs">
+      <DependentUpon>CourseInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DAO\aStudent.cs" />
+    <Compile Include="DAL\DAO\DatabaseConnection.cs" />
+    <Compile Include="DAL\DAO\Student.cs" />
+    <Compile Include="DAL\DAO\StudentDA.cs" />
+    <Compile Include="DAL\StudentDL.cs" />
+    <Compile Include="DAL\DAO\DataGriedViewRow.cs" />
+    <Compile Include="DAL\DAO\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UIL\Students.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIL\Students.Designer.cs">
+      <DependentUpon>Students.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AccountCrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AccountCrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Result Sheet.resx">
+      <DependentUpon>Result Sheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResultCrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ResultCrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search Acco info.resx">
+      <DependentUpon>Search Acco info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search_Result_Info.resx">
+      <DependentUpon>Search_Result_Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIL\CoursesU.resx">
+      <DependentUpon>CoursesU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIL\Search Teacher Info.resx">
+      <DependentUpon>Search Teacher Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIL\Sign_IN.resx">
+      <DependentUpon>Sign_IN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIL\Search Student Info.resx">
+      <DependentUpon>Search Student Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIL\AccountUI.resx">
+      <DependentUpon>AccountUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIL\RESULT.resx">
+      <DependentUpon>RESULT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIL\Teacher.resx">
+      <DependentUpon>Teacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIL\CourseInformation.resx">
+      <DependentUpon>CourseInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UIL\Students.resx">
+      <DependentUpon>Students.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="AccountDataSet.xsc">
+      <DependentUpon>AccountDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AccountDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AccountDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AccountDataSet.xss">
+      <DependentUpon>AccountDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="ResultDataSet1.xsc">
+      <DependentUpon>ResultDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ResultDataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ResultDataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ResultDataSet1.xss">
+      <DependentUpon>ResultDataSet1.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\books.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\results.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1000-taka-money.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\taka.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
